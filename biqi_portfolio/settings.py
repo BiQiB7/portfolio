@@ -34,8 +34,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'mythical_creatures',
-    'art3D',
+    # 'mythical_creatures',
+    # 'art3D',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
