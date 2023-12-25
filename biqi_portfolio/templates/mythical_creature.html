@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand" href="{% url 'home' %}">Portfolio</a>
+            <div style="margin: 0 20px;"></div>
+            <a class="navbar-brand" href="#">3D Art</a>
+            <div style="margin: 0 20px;"></div>
+            <a class="navbar-brand" href="https://github.com/BiQiB7">Code</a>
+            <div style="margin: 0 20px;"></div>
+            <a class="navbar-brand" href="#">About Me</a>
+        </div>
+    </nav>
+
+    <div style="margin-right: 10%; margin-left: 10%; margin-top: 5%;">
+        <div class="row justify-content-center text-center">
+            <h3 style>Mythical Creatures</h3>
+            <p class="card-text" style="width: 1000px;">A simplified liquid / fluid container shader, made in stingray
+                engine and its shader graph. Including a dirty glass shader. Due to limitations this is made entirely in
+                shaders Im not using a custom clipping plane, nor any rigs with jiggle constraints. Below you can see
+                the
+                first pass as well as the final solution. This task was an early research on what we could do with the
+                current limitations, and it was left to be iterated and developed further</p>
+        </div>
+        <div style="width: 600px; height: 400px; margin:0 auto; padding-top: 20px;"
+            class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" style="width: 100%; height: 100%;"
+                src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+        </div>
+        <!-- <div style="display: flex; justify-content: flex-end; margin-top: 40px;">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <a href="{% url 'mythical_creatures:mythical_creatures' %}" class="card-link"></a>
+
+                    <div class="card mb-3 img-container">
+                        <a href="{% url 'mythical_creatures:mythical_creatures' %}" class="card-link">
+                            <img src="{% static 'dragon.jpg' %}" class="card-img-top" alt="My image">
+                        </a>
+
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer .</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="row justify-content-center" style="margin-top: 20px;">
+            <div class="row justify-content-center" style="margin-top: 20px;">
+              <div class="col-md-4">
+        
+                <div class="card mb-3">
+                  <a href="{% url 'mythical_creatures:mythical_creatures' %}" class="card-link"></a>
+        
+                  <div class="card mb-3 img-container">
+                    <a href="{% url 'mythical_creatures:mythical_creatures' %}" class="card-link">
+                      <img src="{% static 'dragon.jpg' %}" class="card-img-top" alt="My image">
+                    </a>
+        
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                      additional content. This content is a little bit longer .</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-3">
+                  <div class="card mb-3 img-container">
+                    <img src="{% static 'chinese_architecture.jpg' %}" class="card-img-top" alt="My image">
+        
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                      additional content. This content is a little bit longer .</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+
+
+
+
+
+    <style>
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            /* Set the container size as needed */
+            height: 230px;
+            /* Set the container size as needed */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease-in-out;
+        }
+
+        .img-container:hover img {
+            transform: scale(1.2);
+            /* Adjust the scale factor for zoom level */
+        }
+
+        a:active {
+            color: #005b11;
+        }
+    </style>
+
+
+</html>
