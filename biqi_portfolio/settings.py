@@ -34,8 +34,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'biqi_portfolio',
     'mythical_creatures',
+    'art3D',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
